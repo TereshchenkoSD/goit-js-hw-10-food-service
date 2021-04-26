@@ -3,13 +3,13 @@ const Theme = {
   DARK: "dark-theme",
 };
 
-const switchToggleref = document.querySelector("#theme-switch-toggle");
+const switchToggleRef = document.querySelector("#theme-switch-toggle");
 
 const bodyRef = document.querySelector("body");
 
 bodyRef.classList.add(Theme.LIGHT);
 
-switchToggleref.addEventListener("change", onSwitchTheme);
+switchToggleRef.addEventListener("change", onSwitchTheme);
 
 function onSwitchTheme(e) {
   if (e.target.id !== "theme-switch-toggle") {
@@ -34,6 +34,6 @@ function onThemeSave(e) {
 
 const savedTheme = localStorage.getItem("current theme");
 if (savedTheme === Theme.DARK) {
-  switchToggleref.checked = true;
+  switchToggleRef.checked = true;
   bodyRef.classList.add(Theme.DARK);
 }
